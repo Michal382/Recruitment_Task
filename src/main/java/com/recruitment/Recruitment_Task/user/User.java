@@ -3,8 +3,6 @@ package com.recruitment.Recruitment_Task.user;
 
 import jakarta.persistence.*;
 
-import java.util.List;
-
 @Entity
 @Table(name = "users")
 public class User {
@@ -24,9 +22,6 @@ public class User {
     @Column(length = 30, nullable = false, name = "last_name")
     private String lastname;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_user_id", referencedColumnName = "id")
-    private List<Address> addresses;
 
     public Integer getId() {
         return id;
@@ -68,11 +63,17 @@ public class User {
         this.lastname = lastname;
     }
 
-    public List<Address> getAdress() {
-        return addresses;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAdress(List<Address> addresses) {
-        this.addresses = addresses;
+    public void setAddress(Address address) {
+        this.address = address;
     }
+
+
+    @OneToOne
+    @JoinColumn(name = "fk_add_id", referencedColumnName = "add_id")
+    private Address address;
+
 }

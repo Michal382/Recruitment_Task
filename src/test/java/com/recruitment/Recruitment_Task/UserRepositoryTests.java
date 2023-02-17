@@ -80,7 +80,7 @@ public class UserRepositoryTests {
 
     @Test
     public void testDeleteByID(){
-        Integer userId= 7;
+        Integer userId= 3;
         repo.deleteById(userId);
 
         Optional<User> optionalUser = repo.findById(userId);
