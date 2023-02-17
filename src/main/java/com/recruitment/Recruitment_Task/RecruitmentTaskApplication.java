@@ -11,10 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class RecruitmentTaskApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext  configurableApplicationContext = SpringApplication.run(RecruitmentTaskApplication.class, args);
-
-		AddressRepository addressRepository = configurableApplicationContext.getBean(AddressRepository.class);
-		UserRepository userRepository = configurableApplicationContext.getBean(UserRepository.class);
+		SpringApplication.run(RecruitmentTaskApplication.class, args);
 
 	}
 

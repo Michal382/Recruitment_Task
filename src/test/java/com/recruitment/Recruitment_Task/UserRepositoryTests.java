@@ -72,7 +72,7 @@ public class UserRepositoryTests {
 
     @Test
     public void testGetUserById(){
-        Integer userId = 3;
+        Integer userId = 2;
         Optional<User> optionalUser = repo.findById(userId);
         assertThat(optionalUser).isPresent();
         System.out.println(optionalUser.get());
@@ -80,7 +80,7 @@ public class UserRepositoryTests {
 
     @Test
     public void testDeleteByID(){
-        Integer userId= 3;
+        Integer userId= 2;
         repo.deleteById(userId);
 
         Optional<User> optionalUser = repo.findById(userId);

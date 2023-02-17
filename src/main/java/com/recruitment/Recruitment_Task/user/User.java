@@ -63,17 +63,5 @@ public class User {
         this.lastname = lastname;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-
-    @OneToOne
-    @JoinColumn(name = "fk_add_id", referencedColumnName = "add_id")
-    private Address address;
 
 }
