@@ -1,4 +1,4 @@
-package com.recruitment.Recruitment_Task.user;
+package com.recruitment.Recruitment_Task.repository;
 
 import com.recruitment.Recruitment_Task.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;

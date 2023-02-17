@@ -26,7 +26,7 @@ public class User {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_user_id", referencedColumnName = "id")
-    private List<Adress> adress;
+    private List<Address> addresses;
 
     public Integer getId() {
         return id;
@@ -68,11 +68,11 @@ public class User {
         this.lastname = lastname;
     }
 
-    public List<Adress> getAdress() {
-        return adress;
+    public List<Address> getAdress() {
+        return addresses;
     }
 
-    public void setAdress(List<Adress> adress) {
-        this.adress = adress;
+    public void setAdress(List<Address> addresses) {
+        this.addresses = addresses;
     }
 }
